@@ -12,7 +12,6 @@ export default function BasicModal({ openModal, handleClose, modalData }) {
         aria-describedby="modal-modal-description"
       >
         <Box className="modalBox">
-          {console.log("modalData: ", modalData)}
           <h3>{modalData.title}</h3>
           <p>{modalData.description}</p>
           <img src={modalData.thumbnail} alt="" />

@@ -29,7 +29,6 @@ export default function StickyHeadTable({
 
   const createRows = () => {
     if (data !== null) {
-      console.log("Da data: ", data);
       const rowsHolder = data.products.map((product) => {
         return createData(
           product.title,
@@ -41,7 +40,7 @@ export default function StickyHeadTable({
         );
       });
       setRows(rowsHolder);
-    } else console.log("Can't update rows. Data loading...");
+    } else console.log("Updating rows. Waiting for data...");
   };
 
   const handleChangePage = (event, newPage) => {
@@ -99,7 +98,9 @@ export default function StickyHeadTable({
                 );
               })
             ) : (
-              <div className="padding bigBoldText">No results</div>
+              <TableRow className="padding bigBoldText">
+                <TableCell>No results</TableCell>
+              </TableRow>
             )}
           </TableBody>
         </Table>

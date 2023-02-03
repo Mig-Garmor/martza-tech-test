@@ -12,7 +12,6 @@ function Search({ text, setText, setData }) {
     if (text.length > 9) {
       setValidationMessage("Query too long");
       setInputError(true);
-      console.log(validationMessage);
     } else {
       setValidationMessage("");
       setInputError(false);

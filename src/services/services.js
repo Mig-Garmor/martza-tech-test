@@ -20,9 +20,7 @@ export const getUserAuth = async () => {
       username: "kminchelle",
       password: "0lelplR",
     }),
-  })
-    .then((res) => res.json())
-    .then(console.log);
+  }).then((res) => res.json());
 };
 
 export const getDataBySearch = async (text) => {
